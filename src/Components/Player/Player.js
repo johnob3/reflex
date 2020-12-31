@@ -1,39 +1,36 @@
 import React from 'react';
-import { useLocation} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
+import {LOCAL_RAP} from "../Routes/Routes";
 
- export const Player = () => {
-	const location = useLocation();
+export const Player = () => {
+    const location = useLocation();
 
-	const map = React.useMemo(() => {
-		return {
-		'/domaciRap':'domaci_rep_fix',
-		'/domaciTrap':'domaci_trep',
-		'/domaciOldSchool':'domaci_old_skul',
-		'/straniRap':'global_rep',
-		'/straniTrap':'global_trep',
-		'/straniOldSchool':'global_old_school',
-		}
-	},[])
+    const map = React.useMemo(() => {
+        return {
+            'localRap': 'domaci_rep_fix',
+            'localTrap': 'domaci_trep',
+            'localOldSchool': 'domaci_old_skul',
+            'globalRap': 'global_rep',
+            'globalTrap': 'global_trep',
+            'globalOldSchool': 'global_old_school',
+        }
+    }, [])
 
-
-	const value = React.useMemo(() => {
-		return map[location.pathname] || map['/domaciRap']
-	},[location, map])
-
-	console.log(value)
+    const value = React.useMemo(() => {
+        return map[location.pathname.slice(1)] || map[LOCAL_RAP.slice(1)]
+    }, [location, map])
 
 
-	return (
-		<div className="play-area">
-			<iframe
-				title="player"
-				src={`http://134.122.77.32/public/${value}/embed`}
-				frameBorder="0"
-				allowtransparency="true"
-				style={{ width: '100%', minHeight: '150px', border: 0 }}
-			/>
-		</div>
-	);
+    return (
+        <div className="play-area">
+            <iframe
+                title="player"
+                src={`http://134.122.77.32/public/${value}/embed`}
+                frameBorder="0"
+                style={{width: '100%', minHeight: '150px', border: 0}}
+            />
+        </div>
+    );
 };
 
 

@@ -1,29 +1,121 @@
-.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+body {
+  font-family: Impact, Arial, Helvetica, sans-serif;
+
+  .app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .app-main {
+      flex: 1;
+      display: flex;
+      justify-content: space-evenly;
+      align-content: space-evenly;
+    }
+
+    .videoTag {
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      min-width: 100%;
+      min-height: 100%;
+      opacity: 0.2;
+    }
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+
+      .list-main, .list-world {
+        flex: 0 21%;
+      }
+
+      .player-main {
+        flex: 0 37%
+      }
+
+      .list-title {
+        color: #dad5d5;
+        text-align: center;
+        font-size: 3rem;
+      }
+
+      .menu-list {
+        padding: 15px;
+        font-size: 3vw;
+        list-style: none;
+        margin: 0 auto;
+
+        li {
+          font-size: 2rem;
+          font-weight: bold;
+          border: solid 1px #ddb3;
+          width: 100%;
+          margin: 2.5rem auto;
+          text-align: center;
+
+          &:hover {
+            background-color: #424242ad;
+
+            .link {
+              color: #ffffff;
+            }
+          }
+        }
+
+
+
+        .link {
+          display: block;
+          width: 100%;
+          color: #afafb1;
+          text-decoration: none;
+          border: none;
+          padding-left: 10px;
+          padding-right: 10px;
+
+          &.active {
+            background-color: #765b77b8;
+            color: white;
+          }
+        }
+      }
+
+      .logo-holder {
+        .logo {
+          width: 100%
+        }
+      }
+
+      .play-area {
+        background-color: #ffffff2e;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 1px 5px 5px #765b77ad;
+      }
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+
+      .facebook, .insta {
+        margin: 5px 15px;
+        display: inline-block;
+        width: 30px;
+        opacity: 0.7;
+        border-radius: 50%;
+      }
+    }
+
+
+  }
+
+
+
 }
 
-.domaca, .strana, .play-area {
-	flex: 1
-}
 
-.lista {
-    padding: 15px;
-    font-size: 3vw;
-}
 
-.strana {
-	text-align: right;
-	li {
-		direction: rtl;
-	}
-}
-
-.insta, .facebook {
-		display: inline-block;
-		width: 30px;
-		margin-left: 1%;
-		opacity: 0.7;
-		border-radius: 50%;
-}
