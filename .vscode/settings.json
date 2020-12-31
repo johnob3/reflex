@@ -1,0 +1,8 @@
+{
+    "editor.formatOnSave": true,
+    "javascript.suggest.autoImports": true,
+    "prettier.javascriptEnable": [
+        "javascript",
+        "javascriptreact"
+    ]
+}
