@@ -6,13 +6,13 @@ import {Player} from "../Player/Player"
 export const Menu = () => {
 
     return (
-        <div>
+        <>
             <MenuLeft>
             </MenuLeft>
             <Player></Player>
             <MenuRight>
             </MenuRight>
-        </div>
+        </>
     )
 }
 

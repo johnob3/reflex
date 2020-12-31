@@ -1,0 +1,29 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.domaca, .strana, .play-area {
+	flex: 1
+}
+
+.lista {
+    padding: 15px;
+    font-size: 3vw;
+}
+
+.strana {
+	text-align: right;
+	li {
+		direction: rtl;
+	}
+}
+
+.insta, .facebook {
+		display: inline-block;
+		width: 30px;
+		margin-left: 1%;
+		opacity: 0.7;
+		border-radius: 50%;
+}

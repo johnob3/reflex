@@ -1,27 +1,15 @@
 import React from 'react';
+import {
+	Link
+  } from "react-router-dom";
 
 export const MenuRight = () => {
 	return (
-		<ul className="lista wrld">
+		<ul className="lista wrld strana">
 			<h1 className="naslov-liste">WORLD</h1>
-
-			<li>
-				<a className="wrld-link" href="./rapwrld.html">
-					RAP
-				</a>
-			</li>
-
-			<li>
-				<a className="wrld-link" href="./trapwrld.html">
-					TRAP
-				</a>
-			</li>
-
-			<li>
-				<a className="wrld-link" href="./oldschoolwrld.html">
-					OLD SCHOOL
-				</a>
-			</li>
+				<li><Link className="active-link domlink" to="/straniRap">RAP</Link></li>
+                <li><Link className="domlink" to="/straniTrap">TRAP</Link></li>
+                <li><Link className="domlink" to="/straniOldSchool">OLD SCHOOL</Link></li>
 		</ul>
 	);
 };
