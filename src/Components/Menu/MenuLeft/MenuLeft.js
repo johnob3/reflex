@@ -10,7 +10,7 @@ export const MenuLeft = () => {
         <div className="list-main">
             <h1 className="list-title">BALKAN</h1>
             <ul className="menu-list">
-                <li><NavLink activeClass className="link" to={LOCAL_RAP}>RAP</NavLink></li>
+                <li><NavLink className="link" to={LOCAL_RAP}>RAP</NavLink></li>
                 <li><NavLink className="link" to={LOCAL_TRAP}>TRAP</NavLink></li>
                 <li><NavLink className="link" to={LOCAL_OLD_SCHOOL}>OLD SCHOOL</NavLink></li>
             </ul>

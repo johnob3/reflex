@@ -5,7 +5,7 @@ import {Player} from "../Player/Player"
 
 import Logo from "../../assets/img/logo_new.png"
 
-export const Menu = () => {
+export const Menu = ({page}) => {
     return (
         <>
             <MenuLeft/>
@@ -13,7 +13,7 @@ export const Menu = () => {
                 <div className="logo-holder">
                     <img className={"logo"} src={Logo} alt="logo"/>
                 </div>
-                <Player/>
+                <Player page={page}/>
                 {/*<Chat />*/}
             </div>
             <MenuRight/>

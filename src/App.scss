@@ -22,6 +22,7 @@ body {
       min-height: 100%;
       opacity: 0.2;
     }
+
     .container {
       display: flex;
       justify-content: space-evenly;
@@ -29,17 +30,21 @@ body {
       width: 100%;
 
       .list-main, .list-world {
-        flex: 0 21%;
+        //flex: 0 21%;
+        background-color: #6d6e701f;
+        border-radius: 10px;
       }
 
       .player-main {
-        flex: 0 37%
+        //flex: 0 37%;
+        margin: 15px;
       }
 
       .list-title {
         color: #dad5d5;
         text-align: center;
         font-size: 3rem;
+        margin: 10px 0;
       }
 
       .menu-list {
@@ -51,10 +56,12 @@ body {
         li {
           font-size: 2rem;
           font-weight: bold;
-          border: solid 1px #ddb3;
           width: 100%;
-          margin: 2.5rem auto;
           text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 6rem;
 
           &:hover {
             background-color: #424242ad;
@@ -66,15 +73,17 @@ body {
         }
 
 
-
         .link {
-          display: block;
           width: 100%;
           color: #afafb1;
           text-decoration: none;
           border: none;
           padding-left: 10px;
           padding-right: 10px;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           &.active {
             background-color: #765b77b8;
@@ -84,8 +93,11 @@ body {
       }
 
       .logo-holder {
+        display: flex;
+        justify-content: center;
+
         .logo {
-          width: 100%
+          width: 50%;
         }
       }
 
@@ -112,10 +124,62 @@ body {
 
 
   }
-
-
-
 }
 
+@media all and (max-width: 1040px) {
+  body {
+    .app-container {
+      .container {
+        .list-main, .list-world {
+          //flex: 0 21%;
+        }
+
+        .player-main {
+          //flex: 0 37%;
+        }
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 768px) {
+  body {
+    .app-container {
+      .container {
+        flex-direction: column;
+
+        .list-title {
+          font-size: 1.5rem;
+        }
+
+        .menu-list {
+          display: flex;
+
+          .list-world {
+            display: flex;
+            flex-direction: column-reverse;
+          }
+
+          li {
+            font-size: 1.3rem;
+            width: 6rem;
+          }
+        }
+
+        .play-area {
+          height: 175px;
+        }
+
+        .logo-holder {
+          float: left;
+          width: 50%;
+          margin-left: calc(50% - 80px);
+
+        }
+      }
+    }
+  }
+}
 
 
