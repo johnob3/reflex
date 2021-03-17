@@ -6,7 +6,7 @@ import {GLOBAL_RAP, GLOBAL_TRAP, GLOBAL_OLD_SCHOOL} from "../../Routes/Routes";
 
 export const MenuRight = () => {
     return (
-        <div className="list-world">
+        <div className="list list-world">
             <h1 className="list-title">WORLD</h1>
             <ul className="menu-list global">
                 <li><NavLink className="link" to={GLOBAL_RAP}>RAP</NavLink></li>

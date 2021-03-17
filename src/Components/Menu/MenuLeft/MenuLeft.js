@@ -7,7 +7,7 @@ import {LOCAL_OLD_SCHOOL, LOCAL_RAP, LOCAL_TRAP} from "../../Routes/Routes";
 export const MenuLeft = () => {
 
     return (
-        <div className="list-main">
+        <div className="list list-main">
             <h1 className="list-title">BALKAN</h1>
             <ul className="menu-list">
                 <li><NavLink className="link" to={LOCAL_RAP}>RAP</NavLink></li>
